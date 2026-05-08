@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phones - TechLy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f1ec;
+            color: #1a1a2e;
+        }
+        header {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #f5a623;
+            text-decoration: none;
+        }
+
+        .logo span { color: white; }
+
+        header ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header ul li {
+            margin-left: 20px;
+        }
+
+        header ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        header ul li a:hover {
+            color: #f5a623;
+        }
+                header a{
+            color: white;
+        }
+            footer { background-color: #1a1a2e; color: white; text-align: center; padding: 40px; margin-top: 40px; }
+    .footer-links a { color: #f5a623; text-decoration: none; margin: 0 10px; }
+
+        h1 {
+            color: #1a1a2e;
+            margin: 40px 5% 20px;
+            font-size: 2rem;
+            border-left: 5px solid #f5a623;
+            padding-left: 15px;
+        }
+
+        .phone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 5% 40px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #e0ddd6;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: 10px;
+            right: -35px;
+            background-color: #e84040;
+            color: white;
+            padding: 5px 40px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transform: rotate(45deg);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .price-container {
+            margin: 15px 0;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 0.9rem;
+            margin-right: 10px;
+        }
+
+        .current-price {
+            color: #333;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .normal-price {
+            color: #1a1a2e;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .buy-btn {
+            background-color: #1a1a2e;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #f5a623;
+        }
+      .cart-btn {
+      background-color: #e0a800; 
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+        #msg {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #1a1a2e;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      display: none;
+    }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e0ddd6;
+            margin: 20px 5%;
+        }
+        a{
+          text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="Home.html" class="logo">Tech<span>Ly</span></a>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="phones.html">Phones</a></li>
+                <li><a href="tablets.html">Tablets</a></li>                                
+                <li><a href="laptops.html">Laptops</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    
+        <button class="cart-btn">
+      <a href="ORDERnow.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </button>
+  </header>
+    <div class="container" id="products-container">
+    </div>
+
+  <div id="msg">the product was added successfuly🎉</div>
+
+
+    <h1>Apple iPhones</h1>
+    <div class="phone-grid">
+        <div class="card">
+            <div class="offer-badge">SALE</div>
+            <a href="iphone16.html"><img src="images/16.jpeg" alt="iPhone 16"></a>
+            <h3>iPhone 16</h3>
+            <div class="price-container">
+                <span class="old-price">$799</span>
+                <span class="current-price">$999</span>
+            </div>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <div class="offer-badge">SALE</div>
+            <a href="iphone16pro.html"><img src="images/16pro.jpeg" alt="iPhone 16 Pro"></a>
+            <h3>iPhone 16 Pro</h3>
+            <div class="price-container">
+                <span class="old-price">$999</span>
+                <span class="current-price">$899</span>
+            </div>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/17.jpeg" alt="iPhone 17">
+            <h3>iPhone 17</h3>
+            <div class="price-container">
+                <span class="normal-price">$799</span>
+            </div>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <h1>Samsung Galaxy</h1>
+    <div class="phone-grid">
+        <div class="card">
+            <div class="offer-badge">SALE</div>
+            <a href="samsungs25.html"><img src="images/s25.jpeg" alt="S25"></a>
+            <h3>Samsung S25</h3>
+            <div class="price-container">
+                <span class="old-price">$799</span>
+                <span class="current-price">$649</span>
+            </div>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/s26ultra.jpeg" alt="S26 Ultra">
+            <h3>S26 Ultra</h3>
+            <div class="price-container">
+                <span class="normal-price">$1,299</span>
+            </div>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+<script>
+    // Initialize cart value
+    let cartValue = 0;
+
+    // Function to handle adding items
+    function addToCart() {
+        // 1. Increment count
+        cartValue++;
+        
+        // 2. Update the UI counter
+        document.getElementById('cart-count').innerText = cartValue;
+
+        // 3. Show the success message
+        const msg = document.getElementById('msg');
+        msg.style.display = "block";
+
+        // 4. Hide the message after 2 seconds
+        setTimeout(() => { 
+            msg.style.display = "none"; 
+        }, 2000);
+    }
+
+    // Attach the function to all "Add to Cart" buttons
+    const buyButtons = document.querySelectorAll('.buy-btn');
+    buyButtons.forEach(button => {
+        button.addEventListener('click', addToCart);
+    });
+</script>
+    </div>
+      <footer>
+    <p>© 2026 <b>TechLy</b>. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="aboutus.html">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="Contactus.html">Contact Us</a>
+    </div>
+  </footer>
+
+</body>
+</html>
